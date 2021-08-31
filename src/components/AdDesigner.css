@@ -11,3 +11,19 @@
 .fontSize {
   font-family: Consolas, monospace;
 }
+
+button {
+  font-family: monospace;
+  background: #0e3c7e;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+button:active {
+  background: #1e60a9 !important;
+}
+
+button[disabled] {
+  background: gray !important;
+}

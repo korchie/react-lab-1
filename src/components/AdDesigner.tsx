@@ -6,18 +6,20 @@ import "./AdDesigner.css";
 function AdDesigner() {
     const [ad, setAd] = useState("Strawberry");
     const [theme, setTheme] = useState("Light");
-    const [font, setFont] = useState(15);
+    const [font, setFont] = useState(50);
+    const styles = { fontSize: font };
 
 
     return (
         <div className="AdDesigner">
             <Card style={{ width: '18rem', textAlign: "center" }}>
+
                 <Card.Body className={theme == "Light" ? "light" : "dark"}>
                     {/* ^^not working! */}
                     <Card.Title>Vote for</Card.Title>
                     <Card.Subtitle
                         className="mb-2"
-                        style={{ fontSize: 50 }}>{ad}</Card.Subtitle>
+                        style={styles}>{ad}</Card.Subtitle>
                 </Card.Body>
             </Card>
 
@@ -44,13 +46,13 @@ function AdDesigner() {
             <Button
                 disabled={ad === "Light"}
                 variant="primary"
-                onClick={() => { setAd("Light") }}>Light
+                onClick={() => { setTheme("Light") }}>Light
             </Button>
 
             <Button
                 disabled={ad === "Dark"}
                 variant="primary"
-                onClick={() => { setAd("Dark") }}>Dark
+                onClick={() => { setTheme("Dark") }}>Dark
             </Button>
 
             <h2>Font Size</h2>

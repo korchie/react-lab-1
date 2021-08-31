@@ -13,7 +13,8 @@ function Votes() {
         <div>
             <h1>Vote Here</h1>
             <Button
-                // disabled={ad === "Chocolate"}
+                id="chocolateButton"
+                disabled={totalVotes >= 20}
                 variant="primary"
                 onClick={() => {
                     setChocolateVotes((previous) => previous + 1);
@@ -23,7 +24,8 @@ function Votes() {
 
 
             <Button
-                // disabled={ad === "Strawberry"}
+
+                disabled={totalVotes >= 20}
                 variant="secondary"
                 onClick={() => {
                     setStrawberryVotes((previous) => previous + 1);
@@ -32,7 +34,7 @@ function Votes() {
             </Button>
 
             <Button
-                // disabled={ad === "Vanilla"}
+                disabled={totalVotes >= 20}
                 variant="success"
                 onClick={() => {
                     setVanillaVotes((previous) => previous + 1);

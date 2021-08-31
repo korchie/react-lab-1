@@ -1,0 +1,13 @@
+.light {
+  border: 1px solid #222;
+}
+
+.dark {
+  color: #fff;
+  background: #222;
+  border: 1px solid #222;
+}
+
+.fontSize {
+  font-family: Consolas, monospace;
+}

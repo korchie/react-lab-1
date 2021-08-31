@@ -8,13 +8,16 @@ function AdDesigner() {
     const [theme, setTheme] = useState("Light");
     const [font, setFont] = useState(15);
 
+
     return (
         <div className="AdDesigner">
             <Card style={{ width: '18rem', textAlign: "center" }}>
                 <Card.Body className={theme == "Light" ? "light" : "dark"}>
                     {/* ^^not working! */}
                     <Card.Title>Vote for</Card.Title>
-                    <Card.Subtitle className="mb-2">{ad}</Card.Subtitle>
+                    <Card.Subtitle
+                        className="mb-2"
+                        style={{ fontSize: 50 }}>{ad}</Card.Subtitle>
                 </Card.Body>
             </Card>
 
@@ -22,12 +25,14 @@ function AdDesigner() {
             <Button
                 disabled={ad === "Chocolate"}
                 variant="primary"
-                onClick={() => { setAd("Chocolate") }}>Chocolate</Button>
+                onClick={() => { setAd("Chocolate") }}>Chocolate
+            </Button>
 
             <Button
                 disabled={ad === "Strawberry"}
                 variant="secondary"
-                onClick={() => { setAd("Strawberry") }}>Strawberry</Button>
+                onClick={() => { setAd("Strawberry") }}>Strawberry
+            </Button>
 
             <Button
                 disabled={ad === "Vanilla"}
@@ -53,7 +58,9 @@ function AdDesigner() {
                 variant="primary"
                 onClick={() => { setFont(previous => previous - 1) }}>Down
             </Button>
+
             <span className="size">{font.toString().padStart(3, "0")}</span>
+
             <Button
                 variant="primary"
                 onClick={() => { setFont(previous => previous + 1) }}>Up

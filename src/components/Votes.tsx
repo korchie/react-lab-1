@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button'
+import ProgressBar from 'react-bootstrap/ProgressBar'
+import "./Votes.css";
 
 
 function Votes() {
@@ -37,7 +39,13 @@ function Votes() {
                     setTotalVotes((previous) => previous + 1);
                 }}>Vanilla
             </Button>
-            <p>{chocolateVotes} - {strawberryVotes} -{vanillaVotes}- {totalVotes}</p>
+
+            <p>Chocolate: {chocolateVotes} ({(chocolateVotes / totalVotes).toFixed(1)}%)</p>
+            <ProgressBar now={chocolateVotes} className="chocolateBar" />
+            <p>Strawberry: {strawberryVotes} ({(strawberryVotes / totalVotes).toFixed(1)}%)</p>
+            <ProgressBar now={strawberryVotes} className="strawberryBar" />
+            <p>Vanilla: {vanillaVotes} ({(vanillaVotes / totalVotes).toFixed(1)}%)</p>
+            <ProgressBar now={vanillaVotes} className="vanillaBar" />
         </div>
     )
 }

@@ -1,0 +1,11 @@
+.chocolateBar .progress-bar {
+  background: #832525;
+}
+
+.strawberryBar .progress-bar {
+  background: rgb(228, 119, 170);
+}
+
+.vanillaBar .progress-bar {
+  background: rgb(247, 247, 185);
+}

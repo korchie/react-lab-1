@@ -42,11 +42,11 @@ function Votes() {
                 }}>Vanilla
             </Button>
 
-            <p>Chocolate: {chocolateVotes} ({(chocolateVotes / totalVotes).toFixed(1)}%)</p>
+            <p>Chocolate: {chocolateVotes} ({((chocolateVotes / totalVotes) * 100).toFixed(1)}%)</p>
             <ProgressBar now={chocolateVotes} className="chocolateBar" />
-            <p>Strawberry: {strawberryVotes} ({(strawberryVotes / totalVotes).toFixed(1)}%)</p>
+            <p>Strawberry: {strawberryVotes} ({((strawberryVotes / totalVotes) * 100).toFixed(1)}%)</p>
             <ProgressBar now={strawberryVotes} className="strawberryBar" />
-            <p>Vanilla: {vanillaVotes} ({(vanillaVotes / totalVotes).toFixed(1)}%)</p>
+            <p>Vanilla: {vanillaVotes} ({((vanillaVotes / totalVotes) * 100).toFixed(1)}%)</p>
             <ProgressBar now={vanillaVotes} className="vanillaBar" />
         </div>
     )

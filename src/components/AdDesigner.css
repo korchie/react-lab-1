@@ -27,3 +27,7 @@ button:active {
 button[disabled] {
   background: gray !important;
 }
+
+.card {
+  box-shadow: 0 4px 3px grey;
+}
